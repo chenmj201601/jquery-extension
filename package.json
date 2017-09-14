@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "jQuery plugin for some usefull components",
   "main": "index.js",
+  "homepage": "https://github.com/chenmj201601/jquery-extension",
   "scripts": {
+    "build": "grunt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -11,8 +13,16 @@
     "plugin",
     "component"
   ],
-  "author": "charley",
+  "author": {
+    "name": "Charley",
+    "email": "609539125@qq.com",
+    "url": "https://github.com/chenmj201601/jquery-extension"
+  },
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chenmj201601/jquery-extension.git"
+  },
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-concat": "^1.0.1",
