@@ -8,7 +8,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 src: ['src/BASE64.js', 'src/DateHelper.js'],
-                dest: 'dest/jquery-extension.js'
+                dest: 'dist/jquery-extension.js'
             }
         },
         uglify: {
@@ -16,8 +16,8 @@ module.exports = function (grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
-                src: 'dest/jquery-extension.js',
-                dest: 'dest/jquery-extension.min.js'
+                src: 'dist/jquery-extension.js',
+                dest: 'dist/jquery-extension.min.js'
             }
         }
     });
