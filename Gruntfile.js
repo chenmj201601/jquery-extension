@@ -7,7 +7,7 @@ module.exports = function (grunt) {
                 banner: '/*! <%= pkg.name %> ( <%= pkg.version %> ) <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             dist: {
-                src: ['src/BASE64.js', 'src/DateHelper.js','src/PrintArea.js'],
+                src: ['src/BASE64.js', 'src/DateHelper.js','src/printarea.js','src/slimscroll.js','src/treetable.js','src/cookie.js'],
                 dest: 'dist/jquery-extension.js'
             }
         },
