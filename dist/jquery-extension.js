@@ -1,4 +1,4 @@
-/*! jquery-extension ( 1.0.0 ) 2017-11-06 */
+/*! jquery-extension ( 1.0.0 ) 2017-11-07 */
 /**
  * Base64编码解码，只支持 UTF-8 编码
  *
@@ -219,7 +219,7 @@
     };
 
     return this;
-})(jQuery);;
+})(jQuery);
 /**
  * 日期帮助类，日期格式化等操作
  *
@@ -260,7 +260,7 @@
         }
     };
 
-})(jQuery);;
+})(jQuery);
 /**
  * jQuery 页面部分打印，提供两种方式 Popup 和 iFrame。
  * Fork from RitsC/PrintArea on version 2.4.1
@@ -460,7 +460,7 @@
         }
     };
 })(jQuery);
-;
+
 /**
  * 滚动条，自动隐藏
  * Fork from rochal/jQuery-slimScroll on version 1.3.8
@@ -923,7 +923,7 @@
     });
 
 })(jQuery);
-;
+
 /**
  * 网格树插件
  * Fork from ludo/jquery-treetable on version 3.2.0
@@ -1553,7 +1553,7 @@
     this.TreeTable.Node = Node;
     this.TreeTable.Tree = Tree;
 })(jQuery);
-;
+
 /**
  * jQuery 读写 Cookie
  * Fork from carhartl/jquery-cookie on version 1.4.1
