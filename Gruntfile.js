@@ -7,12 +7,18 @@ module.exports = function (grunt) {
                 banner: '/*! <%= pkg.name %> ( <%= pkg.version %> ) <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             js:{
-                src:['src/BASE64.js', 'src/DateHelper.js','src/printarea.js','src/slimscroll.js','src/treetable.js','src/cookie.js'],
-                dest:'dist/jquery-extension.js'
+                src:['src/BASE64.js',
+                    'src/DateHelper.js',
+                    'src/printarea.js',
+                    //'src/slimscroll.js',
+                    //'src/treetable.js',
+                    'src/cookie.js'],
+                dest:'dist/jquery.extension.js'
             },
             css:{
-                src:['src/css/treetable.css','src/css/treetable.theme.default.css'],
-                dest:'dist/jquery-extension.css'
+                src:['src/css/treetable.css',
+                    'src/css/treetable.theme.default.css'],
+                dest:'dist/jquery.extension.css'
             }
         },
         uglify: {
@@ -20,14 +26,14 @@ module.exports = function (grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
-                src: 'dist/jquery-extension.js',
-                dest: 'dist/jquery-extension.min.js'
+                src: 'dist/jquery.extension.js',
+                dest: 'dist/jquery.extension.min.js'
             }
         },
         cssmin:{
             css:{
-                src:'dist/jquery-extension.css',
-                dest:'dist/jquery-extension.min.css'
+                src:'dist/jquery.extension.css',
+                dest:'dist/jquery.extension.min.css'
             }
         }
     });
