@@ -4,41 +4,44 @@ module.exports = function (grunt) {
         concat: {
             options: {
                 separator: '\n',
-                banner: '/*! <%= pkg.name %> ( <%= pkg.version %> ) <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+                banner: '/*! <%= pkg.name %> ( <%= pkg.version %> ) */\n'
             },
-            js:{
-                src:['src/BASE64.js',
+            js: {
+                src: ['src/BASE64.js',
                     'src/DateHelper.js',
                     'src/printarea.js',
                     //'src/slimscroll.js',
                     //'src/treetable.js',
                     'src/cookie.js'],
-                dest:'dist/jquery.extension.js'
+                dest: 'dist/jquery.extension.js'
             },
-            css:{
-                src:['src/css/treetable.css',
+            css: {
+                src: ['src/css/treetable.css',
                     'src/css/treetable.theme.default.css'],
-                dest:'dist/jquery.extension.css'
+                dest: 'dist/jquery.extension.css'
             }
         },
         uglify: {
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+                banner: '/*! <%= pkg.name %> ( <%= pkg.version %> ) */\n'
             },
             build: {
                 src: 'dist/jquery.extension.js',
                 dest: 'dist/jquery.extension.min.js'
             }
         },
-        cssmin:{
-            css:{
-                src:'dist/jquery.extension.css',
-                dest:'dist/jquery.extension.min.css'
+        cssmin: {
+            options: {
+                banner: '/*! <%= pkg.name %> ( <%= pkg.version %> ) */\n'
+            },
+            css: {
+                src: 'dist/jquery.extension.css',
+                dest: 'dist/jquery.extension.min.css'
             }
         }
     });
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-css');
-    grunt.registerTask('default', ['concat', 'uglify','cssmin']);
+    grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
 };

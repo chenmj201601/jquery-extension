@@ -1,4 +1,4 @@
-/*! jquery-extension ( 1.0.0 ) 2017-11-11 */
+/*! jquery-extension ( 1.0.0 ) */
 /**
  * Base64编码解码，只支持 UTF-8 编码
  *
