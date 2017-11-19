@@ -243,13 +243,13 @@
          */
         format: function (date, fmt) {
             var o = {
-                "M+": date.getMonth() + 1,                 //月份   
+                "M+": date.getMonth() + 1,                  //月份   
                 "d+": date.getDate(),                    //日   
-                "h+": date.getHours(),                   //小时   
-                "m+": date.getMinutes(),                 //分   
-                "s+": date.getSeconds(),                 //秒   
-                "q+": Math.floor((date.getMonth() + 3) / 3),        //季度   
-                "S": date.getMilliseconds()             //毫秒   
+                "h+": date.getHours(),                    //小时   
+                "m+": date.getMinutes(),                    //分   
+                "s+": date.getSeconds(),                    //秒   
+                "q+": Math.floor((date.getMonth() + 3) / 3),                //季度   
+                "S": date.getMilliseconds()                     //毫秒   
             };
             if (/(y+)/.test(fmt))
                 fmt = fmt.replace(RegExp.$1, (date.getFullYear() + "").substr(4 - RegExp.$1.length));
@@ -257,6 +257,24 @@
                 if (new RegExp("(" + k + ")").test(fmt))
                     fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
             return fmt;
+        },
+        /**
+         * 将字符串转换为日期，可以指定格式化字符串
+         *
+         * @param value
+         * @param fmt
+         * @returns {Date}
+         */
+        parse: function (value, fmt) {
+            if (fmt == "yyyyMMddhhmmss") {
+                value = value.substr(0, 4) + "/"
+                    + value.substr(4, 2) + "/"
+                    + value.substr(6, 2) + " "
+                    + value.substr(8, 2) + ":"
+                    + value.substr(10, 2) + ":"
+                    + value.substr(12, 2);
+            }
+            return new Date(value);
         }
     };
 
