@@ -9,6 +9,7 @@ module.exports = function (grunt) {
             js: {
                 src: ['src/BASE64.js',
                     'src/DateHelper.js',
+                    'src/StringHelper.js',
                     'src/printarea.js',
                     //'src/slimscroll.js',
                     //'src/treetable.js',
