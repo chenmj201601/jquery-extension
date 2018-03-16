@@ -274,6 +274,14 @@
                     + value.substr(10, 2) + ":"
                     + value.substr(12, 2);
             }
+            if (fmt == "yyyy-MM-dd hh:mm:ss") {
+                value = value.substr(0, 4) + "/"
+                    + value.substr(5, 2) + "/"
+                    + value.substr(8, 2) + " "
+                    + value.substr(11, 2) + ":"
+                    + value.substr(14, 2) + ":"
+                    + value.substr(17, 2);
+            }
             return new Date(value);
         }
     };
